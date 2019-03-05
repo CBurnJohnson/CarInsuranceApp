@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using CarinsuranceApp.Models;
 
 namespace CarinsuranceApp.Controllers
 {
@@ -12,19 +13,30 @@ namespace CarinsuranceApp.Controllers
         {
             return View();
         }
-
-        public ActionResult About()
+        
+        [HttpPost]
+        public ActionResult QuoteInfo(string firstName, string lastName, string emailAddress, DateTime? dateOfBirth, int carYear, string carMake, string carModel, bool dui, int speedingTickets, bool coverageLiability)
         {
-            ViewBag.Message = "Your application description page.";
+            using (CarInsuranceEntities db = new CarInsuranceEntities())
+            {
+                var quoteinfo = new QuoteInfo();
+                quoteinfo.FirstName = firstName;
+                quoteinfo.LastName = lastName;
+                quoteinfo.EmailAddress = emailAddress;
+                quoteinfo.DateOfBirth = dateOfBirth;
+                quoteinfo.CarYear = carYear;
+                quoteinfo.CarMake = carMake;
+                quoteinfo.CarModel = carModel;
+                quoteinfo.DUI = dui;
+                quoteinfo.SpeedingTickets = speedingTickets;
+                quoteinfo.CoverageLiability = coverageLiability;
 
-            return View();
+                db.QuoteInfoes.Add(quoteinfo);
+                db.SaveChanges();
+            }
+
+            return View("Index");
         }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
+        
     }
 }

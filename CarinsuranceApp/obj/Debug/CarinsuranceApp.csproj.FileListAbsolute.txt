@@ -78,3 +78,7 @@ C:\Projects\CarinsuranceApp\CarinsuranceApp\obj\Debug\CarinsuranceApp.csproj.Cor
 C:\Projects\CarinsuranceApp\CarinsuranceApp\obj\Debug\CarinsuranceApp.csproj.CopyComplete
 C:\Projects\CarinsuranceApp\CarinsuranceApp\obj\Debug\CarinsuranceApp.dll
 C:\Projects\CarinsuranceApp\CarinsuranceApp\obj\Debug\CarinsuranceApp.pdb
+C:\Projects\CarinsuranceApp\CarinsuranceApp\bin\EntityFramework.dll
+C:\Projects\CarinsuranceApp\CarinsuranceApp\bin\EntityFramework.SqlServer.dll
+C:\Projects\CarinsuranceApp\CarinsuranceApp\bin\EntityFramework.xml
+C:\Projects\CarinsuranceApp\CarinsuranceApp\bin\EntityFramework.SqlServer.xml
