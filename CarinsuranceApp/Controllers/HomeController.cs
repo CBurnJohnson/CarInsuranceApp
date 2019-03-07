@@ -61,12 +61,18 @@ namespace CarinsuranceApp.Controllers
             // DUI cost
             if (dui == true)
             {
-                int duiCost = quote * .25;
-                quote = quote 
+                double duiCost = quote * .25;
+                int intDuiCost = Convert.ToInt32(duiCost);
+                quote = quote + intDuiCost;
+            }
+            // Full coverage cost
+            if (coverageLiability == true)
+            {
+                double coverageCost = quote * .50;
+                int intCoverageCost = Convert.ToInt32(coverageCost);
+                quote = quote + intCoverageCost;
             }
 
-
-            
             using (CarInsuranceEntities db = new CarInsuranceEntities())
             {
                 var quoteinfo = new QuoteInfo();
@@ -86,8 +92,9 @@ namespace CarinsuranceApp.Controllers
                 db.SaveChanges();
             }
 
-            return View("Index");
+            return View("Quote");
         }
+
         
     }
 }
