@@ -25,5 +25,6 @@ namespace CarinsuranceApp.Models
         public Nullable<bool> DUI { get; set; }
         public Nullable<int> SpeedingTickets { get; set; }
         public Nullable<bool> CoverageLiability { get; set; }
+        public Nullable<int> Quote { get; set; }
     }
 }

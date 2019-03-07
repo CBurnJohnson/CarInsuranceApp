@@ -4,6 +4,7 @@
     <EntitySetMapping Name="QuoteInfoes">
       <EntityTypeMapping TypeName="CarInsuranceModel.QuoteInfo">
         <MappingFragment StoreEntitySet="QuoteInfo">
+          <ScalarProperty Name="Quote" ColumnName="Quote" />
           <ScalarProperty Name="CoverageLiability" ColumnName="CoverageLiability" />
           <ScalarProperty Name="SpeedingTickets" ColumnName="SpeedingTickets" />
           <ScalarProperty Name="DUI" ColumnName="DUI" />

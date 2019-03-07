@@ -18,5 +18,6 @@
     <Property Name="DUI" Type="Boolean" />
     <Property Name="SpeedingTickets" Type="Int32" />
     <Property Name="CoverageLiability" Type="Boolean" />
+    <Property Name="Quote" Type="Int32" />
   </EntityType>
 </Schema>

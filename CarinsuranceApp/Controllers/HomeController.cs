@@ -17,6 +17,56 @@ namespace CarinsuranceApp.Controllers
         [HttpPost]
         public ActionResult QuoteInfo(string firstName, string lastName, string emailAddress, DateTime dateOfBirth, int carYear, string carMake, string carModel, int speedingTickets, bool coverageLiability, bool dui = false)
         {
+            // Calculating car inurance cost
+            // Calc age
+            int quote = 50;
+            var today = DateTime.Today;
+            var age = today.Year - dateOfBirth.Year;
+            // Age cost
+            if (age < 25 && age >= 18)
+            {
+                quote = quote + 25;
+            }
+            else if ( age < 18)
+            {
+                quote = quote + 100;
+            }
+            else if (age > 100)
+            {
+                quote = quote + 25;
+            }
+            // Cars Year cost
+            if (carYear < 2000)
+            {
+                quote = quote + 25;
+            }
+            else if (carYear > 2015)
+            {
+                quote = quote + 25;
+            }
+            // Cars Make cost
+            if (carMake == "Porsche")
+            {
+                quote = quote + 25;
+            }
+            else if (carMake == "Porsche" && carModel == "911 Carrera")
+            {
+                quote = quote + 25;
+            }
+            // Speeding tickets cost
+            for (int i = 0; i < speedingTickets; i++)
+            {
+                quote = quote + 10;
+            }
+            // DUI cost
+            if (dui == true)
+            {
+                int duiCost = quote * .25;
+                quote = quote 
+            }
+
+
+            
             using (CarInsuranceEntities db = new CarInsuranceEntities())
             {
                 var quoteinfo = new QuoteInfo();
@@ -30,6 +80,7 @@ namespace CarinsuranceApp.Controllers
                 quoteinfo.DUI = dui;
                 quoteinfo.SpeedingTickets = speedingTickets;
                 quoteinfo.CoverageLiability = coverageLiability;
+                quoteinfo.Quote = quote;
 
                 db.QuoteInfoes.Add(quoteinfo);
                 db.SaveChanges();

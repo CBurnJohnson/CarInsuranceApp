@@ -20,6 +20,7 @@
           <Property Name="DUI" Type="bit" />
           <Property Name="SpeedingTickets" Type="int" />
           <Property Name="CoverageLiability" Type="bit" />
+          <Property Name="Quote" Type="int" />
         </EntityType>
         <EntityContainer Name="CarInsuranceModelStoreContainer">
           <EntitySet Name="QuoteInfo" EntityType="Self.QuoteInfo" Schema="dbo" store:Type="Tables" />
@@ -46,6 +47,7 @@
           <Property Name="DUI" Type="Boolean" />
           <Property Name="SpeedingTickets" Type="Int32" />
           <Property Name="CoverageLiability" Type="Boolean" />
+          <Property Name="Quote" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -56,6 +58,7 @@
           <EntitySetMapping Name="QuoteInfoes">
             <EntityTypeMapping TypeName="CarInsuranceModel.QuoteInfo">
               <MappingFragment StoreEntitySet="QuoteInfo">
+                <ScalarProperty Name="Quote" ColumnName="Quote" />
                 <ScalarProperty Name="CoverageLiability" ColumnName="CoverageLiability" />
                 <ScalarProperty Name="SpeedingTickets" ColumnName="SpeedingTickets" />
                 <ScalarProperty Name="DUI" ColumnName="DUI" />
