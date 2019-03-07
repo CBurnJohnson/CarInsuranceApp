@@ -14,8 +14,7 @@ namespace CarinsuranceApp.Controllers
         {
             using (CarInsuranceEntities db = new CarInsuranceEntities())
             {
-                var quoteinfo = (from c in db.QuoteInfoes
-                                 select c).ToList();
+                var quoteinfo = db.QuoteInfoes;
                 var quotes = new List<QuoteInfo>();
                 foreach (var quote in quoteinfo)
                 {
@@ -24,6 +23,7 @@ namespace CarinsuranceApp.Controllers
                     quoteInfo.FirstName = quote.FirstName;
                     quoteInfo.LastName = quote.LastName;
                     quoteInfo.EmailAddress = quote.EmailAddress;
+                    quoteInfo.Quote = quote.Quote;
                     quotes.Add(quoteInfo);
                 }
 

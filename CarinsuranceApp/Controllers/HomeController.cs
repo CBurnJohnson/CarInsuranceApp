@@ -90,11 +90,13 @@ namespace CarinsuranceApp.Controllers
 
                 db.QuoteInfoes.Add(quoteinfo);
                 db.SaveChanges();
-            }
 
-            return View("Quote");
+                return View("Quote", quoteinfo);
+            }
+            
+            
         }
 
-        
+       
     }
 }
