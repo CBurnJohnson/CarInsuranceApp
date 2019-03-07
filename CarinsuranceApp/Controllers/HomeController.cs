@@ -15,7 +15,7 @@ namespace CarinsuranceApp.Controllers
         }
         
         [HttpPost]
-        public ActionResult QuoteInfo(string firstName, string lastName, string emailAddress, DateTime? dateOfBirth, int carYear, string carMake, string carModel, bool dui, int speedingTickets, bool coverageLiability)
+        public ActionResult QuoteInfo(string firstName, string lastName, string emailAddress, DateTime dateOfBirth, int carYear, string carMake, string carModel, int speedingTickets, bool coverageLiability, bool dui = false)
         {
             using (CarInsuranceEntities db = new CarInsuranceEntities())
             {
