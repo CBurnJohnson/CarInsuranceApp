@@ -15,7 +15,7 @@ namespace CarinsuranceApp.Controllers
         }
         
         [HttpPost]
-        public ActionResult QuoteInfo(string firstName, string lastName, string emailAddress, DateTime dateOfBirth, int carYear, string carMake, string carModel, int speedingTickets, bool coverageLiability, bool dui = false)
+        public ActionResult QuoteInfo(string firstName, string lastName, string emailAddress, DateTime dateOfBirth, int carYear, string carMake, string carModel, bool coverageLiability, int speedingTickets = 0, bool dui = false)
         {
             // Calculating car inurance cost
             // Calc age
