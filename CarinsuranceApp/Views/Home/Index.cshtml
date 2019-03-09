@@ -3,7 +3,7 @@
 <div class="row no-gutters m-3">
     <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
         <div class="card-header text-center">   
-            <h5>Fil in your information for your FREE car insurance quote!</h5>
+            <h5 class="text-white">Fil in your information for your FREE car insurance quote!</h5>
         </div>
         <div class="card-body">
             @using (Html.BeginForm("QuoteInfo", "Home", FormMethod.Post))
@@ -19,8 +19,7 @@
                     <input name="EmailAddress" type="email" class="form-control" placeholder="Email Address" />
                 </div>
                 <div class="form-group col-md-12">
-                    <span>Date of Birth</span>
-                    <input name="dateOfBirth" type="datetime" class="form-control" />
+                    <input name="dateOfBirth" type="datetime" class="form-control" placeholder="Date of Birth" />
                 </div>
                 <div class="form-group col-md-12">
                     <input name="CarYear" type="number" class="form-control" placeholder="Car Year" />
@@ -32,17 +31,17 @@
                     <input name="CarModel" type="text" class="form-control" placeholder="Car Model" />
                 </div>
                 <div class="form-group col-md-12">
-                    <span>Have you had a DUI?</span>
+                    <p class="text-white">Have you had a DUI?</p>
                     <input name="dui" type="checkbox" class="form-control" value="true"  />
                 </div>
                 <div class="form-group col-md-12">
-                    <span>How many speeding tickets have you had?</span>
+                    <p class="text-white">How many speeding tickets have you had?</p>
                     <input name="SpeedingTickets" type="number" class="form-control" placeholder="Number of speeding tickets" />
                 </div>
                 <div class="form-group col-md-12">
-                    <span>Full Coverage?</span>
+                    <span class="text-white">Full Coverage?</span>
                     <input name="coverageLiability" type="radio" class="form-control" value="true" checked />
-                    <span>Or only Liability?</span>
+                    <span class="text-white">Or only Liability?</span>
                     <input name="coverageLiability" type="radio" class="form-control" value="false" />
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>

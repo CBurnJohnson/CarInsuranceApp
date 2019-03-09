@@ -1,11 +1,13 @@
-﻿@{
+﻿@using CarinsuranceApp.Models
+@model QuoteInfo
+@{
     ViewBag.Title = "Quote";
 }
 
 <div class="row no-gutters m-3">
     <div class="card mx-auto shadow">
         <div class="card-header text-center">
-            <h1>Your car insurance Quote: $@Model.Quote Monthly</h1>
+            <h1 class="text-white">Your Car Insurance Quote Is: $@Model.Quote Monthly</h1>
         </div>
         
     </div>
